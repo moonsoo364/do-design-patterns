@@ -97,7 +97,7 @@ public class ModelDuck extends Duck {
 | 행동의 분리 | Duck 클래스는 행동을 직접 구현하지 않음 |
 | 재사용성 향상 | FlyBehavior, QuackBehavior 구현체들은 다른 Duck에서도 재사용 가능 |
 | 유연한 확장성 | 새 행동을 추가해도 기존 Duck 코드 수정 없이 확장 가능  |
-| 런타임 전략 변경 가 | `setFlyBehavior()` 메서드 덕분에 동적으로 전략 변경 가능 |
+| 런타임 전략 변경 | `setFlyBehavior()` 메서드 덕분에 동적으로 전략 변경 가능 |
 
 ## 패턴 구조 요약
 
