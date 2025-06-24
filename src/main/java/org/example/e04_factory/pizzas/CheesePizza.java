@@ -1,4 +1,4 @@
-package org.example.e04_factory;
+package org.example.e04_factory.pizzas;
 
 public class CheesePizza extends Pizza{
     public CheesePizza(){

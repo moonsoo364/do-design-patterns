@@ -1,4 +1,4 @@
-package org.example.e04_factory;
+package org.example.e04_factory.pizzas;
 
 public class PizzaTestDrive {
     public static void main(String[] args) {

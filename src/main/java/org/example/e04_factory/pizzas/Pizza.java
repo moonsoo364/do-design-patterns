@@ -1,4 +1,4 @@
-package org.example.e04_factory;
+package org.example.e04_factory.pizzas;
 
 import java.util.ArrayList;
 import java.util.List;
