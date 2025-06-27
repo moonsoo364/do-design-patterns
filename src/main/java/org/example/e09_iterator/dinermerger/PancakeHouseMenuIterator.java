@@ -1,5 +1,6 @@
 package org.example.e09_iterator.dinermerger;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class PancakeHouseMenuIterator implements Iterator {

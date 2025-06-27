@@ -1,5 +1,7 @@
 package org.example.e09_iterator.dinermerger;
 
+import java.util.Iterator;
+
 public class DinerMenu implements Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -33,6 +35,9 @@ public class DinerMenu implements Menu{
             menuItems[numberOfItems] = menuItem;
             numberOfItems = numberOfItems + 1;
         }
+    }
+    public MenuItem[] getMenuItems() {
+        return menuItems;
     }
 
     public Iterator createIterator() {
