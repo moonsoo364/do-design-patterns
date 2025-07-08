@@ -33,36 +33,9 @@ public class GumballMachine
 
     }
 
-    @Override
-    public int getCount() throws RemoteException {
-        return count;
-    }
+    public void insertQuarter() {state.insertQuarter();}
 
-    @Override
-    public String getLocation() throws RemoteException {
-        return "";
-    }
-
-    @Override
-    public State getState() throws RemoteException {
-        return null;
-    }
-    public State getHasQuarterState() {
-        return hasQuarterState;
-    }
-    public State getNoQuarterState() {
-        return noQuarterState;
-    }
-    public State getWinnerState() {
-        return winnerState;
-    }
-    public State getSoldState() {
-        return soldState;
-    }
-    public State getSoldOutState() {
-        return soldOutState;
-    }
-
+    public void ejectQuarter(){state.ejectQuarter();}
 
     void setState(State state) {
         this.state = state;
@@ -73,4 +46,53 @@ public class GumballMachine
             count = count - 1;
         }
     }
+    public void refill(int count){
+        this.count = count;
+        state = noQuarterState;
+    }
+
+    @Override
+    public int getCount() throws RemoteException {
+        return count;
+    }
+    @Override
+    public State getState() throws RemoteException {
+        return null;
+    }
+    @Override
+    public String getLocation() throws RemoteException {
+        return "";
+    }
+
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
+    public State getSoldState() {
+        return soldState;
+    }
+    public State getWinnerState() {
+        return winnerState;
+    }
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("\nMighty Gumball, Inc.");
+        result.append("\nJava-enabled Standing Gumball Model #2014");
+        result.append("\nInventory: " + count + " gumball");
+        if (count != 1) {
+            result.append("s");
+        }
+        result.append("\n");
+        result.append("Machine is " + state + "\n");
+        return result.toString();
+    }
+
+
+
+
 }
